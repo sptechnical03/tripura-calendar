@@ -4,69 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tripura Calendar 2025–2026</title>
+
     <style>
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            background: #f4f6f8;
             margin: 0;
-            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #f4f6f8;
             color: #333;
         }
+
         header {
-            background: #1e88e5;
+            background: #1976d2;
             color: white;
-            padding: 20px;
+            padding: 24px 16px;
             text-align: center;
         }
-        section {
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 15px;
+            opacity: 0.95;
+        }
+
+        main {
             max-width: 900px;
             margin: auto;
             padding: 20px;
         }
+
         .card {
-            background: white;
-            border-radius: 10px;
-            padding: 18px;
-            margin-bottom: 16px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 18px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
+
         .card h2 {
             margin-top: 0;
             font-size: 20px;
         }
-        .btn {
+
+        .subscribe-btn {
             display: inline-block;
-            margin-top: 10px;
-            padding: 10px 16px;
-            background: #1e88e5;
-            color: white;
+            margin-top: 12px;
+            padding: 12px 18px;
+            background: #1976d2;
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: 600;
         }
-        .btn:hover {
-            background: #1565c0;
+
+        .subscribe-btn:hover {
+            background: #125ca1;
         }
+
         .steps {
             background: #fff3cd;
-            border-left: 5px solid #ff9800;
-            padding: 15px;
+            border-left: 6px solid #ff9800;
+            padding: 16px;
             border-radius: 8px;
-            margin-top: 20px;
+            font-size: 15px;
         }
+
+        code {
+            display: block;
+            margin-top: 8px;
+            background: #eeeeee;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            word-break: break-all;
+        }
+
         footer {
             text-align: center;
+            padding: 20px;
             font-size: 13px;
             color: #777;
-            padding: 20px;
-        }
-        code {
-            background: #eee;
-            padding: 2px 6px;
-            border-radius: 4px;
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -74,58 +99,62 @@
     <p>Government • Restricted • Festival Holidays</p>
 </header>
 
-<section>
+<main>
 
     <div class="card">
         <h2>📌 Complete Holiday Calendar</h2>
         <p>
-            Includes all <strong>Government Holidays</strong>, 
-            <strong>Restricted Holidays</strong>, 
-            and <strong>Weekend / Overlap Events</strong> for
-            <strong>Tripura (2025–2026)</strong>.
+            This calendar includes:
         </p>
-        <a class="btn" href="tripura_calendar_2025_2026.ics">
+        <ul>
+            <li>Government Holidays</li>
+            <li>Restricted Holidays</li>
+            <li>Weekend & Overlap Events</li>
+            <li>Applicable for Tripura (2025–2026)</li>
+        </ul>
+
+        <!-- 🔴 IMPORTANT: webcal:// -->
+        <a class="subscribe-btn"
+           href="webcal://sptechnical03.github.io/tripura-calendar/tripura_calendar_2025_2026.ics">
             ➕ Subscribe to Calendar
         </a>
     </div>
 
     <div class="card">
         <h2>📱 How to Subscribe on iPhone</h2>
+
         <div class="steps">
             <ol>
                 <li>Open <strong>Settings</strong></li>
                 <li>Go to <strong>Calendar → Accounts</strong></li>
-                <li>Tap <strong>Add Account → Other</strong></li>
-                <li>Select <strong>Add Subscribed Calendar</strong></li>
-                <li>Paste this URL:</li>
+                <li>Tap <strong>Add Account</strong></li>
+                <li>Select <strong>Other</strong></li>
+                <li>Tap <strong>Add Subscribed Calendar</strong></li>
+                <li>Paste the URL below and tap <strong>Next</strong></li>
             </ol>
-            <p>
-                <code id="subUrl"></code>
-            </p>
+
+            <code>
+webcal://sptechnical03.github.io/tripura-calendar/tripura_calendar_2025_2026.ics
+            </code>
         </div>
     </div>
 
     <div class="card">
-        <h2>💡 Features</h2>
+        <h2>💡 Notes</h2>
         <ul>
             <li>✔ Works on iPhone, Android & Google Calendar</li>
-            <li>✔ Automatic updates</li>
+            <li>✔ Automatically updates when calendar changes</li>
             <li>✔ No app installation required</li>
-            <li>✔ Official iCalendar (.ics) format</li>
+            <li>✔ Official iCalendar (.ics) standard</li>
         </ul>
     </div>
 
-</section>
+</main>
 
 <footer>
     © 2025–2026 Tripura Calendar<br>
     Maintained by Tripura Calendar App
 </footer>
-
-<script>
-    const url = window.location.origin + "/tripura_calendar_2025_2026.ics";
-    document.getElementById("subUrl").textContent = url;
-</script>
 
 </body>
 </html>
